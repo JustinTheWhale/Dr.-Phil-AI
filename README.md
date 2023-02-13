@@ -2,9 +2,7 @@
 
 ## About 
 
-#### Python program that records your voice, creates a text transcription of your voice,
-#### uses the transcription as input to ChatGPT, and plays ChatGPT's response in Dr. Phil's voice.
-#### You can technically do any voice with ElevenLabs but I chose Dr. Phil in this case.
+#### Python program that records your voice, creates a text transcription of your voice, uses the transcription as input to ChatGPT, and plays ChatGPT's response in Dr. Phil's voice. You can technically do any voice with ElevenLabs but I chose Dr. Phil in this case.
 
 #### Tested and working on Python 3.10. Should work on others too. Additionally I've only used this on Windows but I'm sure others can figure out MacOS and Linux.
 

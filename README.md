@@ -10,7 +10,7 @@
 ### Windows
 - #### Make an account for ChatGPT and ElevenLabs.
 - #### Clone this repo or download the zipped source code.
-- #### Follow the same setup from [chatgpt-wrapper](https://github.com/mmabrouk/chatgpt-wrapper) 
+- #### Create an [OpenAI](https://platform.openai.com/docs/api-reference/chat) account and get an API key
 - #### Requires [ffmpeg](https://ffmpeg.org/) to be in your PATH to playback the sound.
 - #### Install [SpeechRecognition](https://pypi.org/project/SpeechRecognition/) with ``` pip install SpeechRecognition ```
 - #### Install [pydub](https://github.com/jiaaro/pydub) with ``` pip install pydub ```

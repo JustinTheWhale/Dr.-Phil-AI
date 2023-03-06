@@ -1,8 +1,8 @@
 import io
 
 import requests
+import openai
 import speech_recognition as sr
-from chatgpt_wrapper import ChatGPT
 from pydub import AudioSegment
 from pydub.playback import play
 
@@ -41,11 +41,16 @@ def ask_chatGPT(prompt: str) -> str:
         str: Response fromChatGPT as a str.
     """
     print("Initailizing connection to the chatGPT API")
-    chatgpt = ChatGPT()
     print("Awaiting response from chatGPT")
-    response = chatgpt.ask(prompt)
-    print(response)
-    return response
+    openai.api_key = ''
+    response = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {"role": "user", "content": prompt},
+    ]
+    )
+
+    return response['choices'][0]['message']['content'].replace("\n", "")
 
 
 def generate_Dr_Phils_voice(text: str) -> None:
@@ -57,8 +62,8 @@ def generate_Dr_Phils_voice(text: str) -> None:
     done = False
     while not done:
         try:
-            elevenLabsKey = 'YOUR-KEY-HERE'
-            voice_id = 'VOICE-ID-HERE'
+            elevenLabsKey = ''
+            voice_id = ''
             body = {'text' : text}
             url = f'https://api.elevenlabs.io/v1/text-to-speech/{voice_id}/stream'
             print('Awaiting response from Dr. Phil')
